@@ -1,7 +1,7 @@
 from django.shortcuts import render,HttpResponseRedirect
 from .forms import registerForm
 from django.urls import reverse,reverse_lazy
-
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login,logout,authenticate
 from django.http import  HttpResponse
@@ -36,7 +36,13 @@ def signIn(request):
             if user is not None:
                 login(request,user)
 
-                return HttpResponse("logged in")
+                return HttpResponseRedirect(reverse('Home:home'))
 
 
     return render(request,'account_app/login.html',context={'form':form})
+
+@login_required
+def logOut(request):
+    logout(request)
+    # messages.warning(request, "You are logged out!!")
+    return HttpResponseRedirect(reverse('Home:home'))

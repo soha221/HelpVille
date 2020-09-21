@@ -55,7 +55,20 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+              {% if request.user.is_authenticated %}
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{request.user.username}}</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="{% url "Home:booth"%}">Profile</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li class="nav-item"><a class="nav-link" href="{% url "account_app:logout"%}">Log Out</a></li>
+                </ul>
+              </li>
+              {% else %}
               <li class="nav-item"><a class="nav-link" href="{% url "account_app:login"%}">Sign in</a></li>
+              {% endif %}
+
             </ul>
           </div>
         </div>

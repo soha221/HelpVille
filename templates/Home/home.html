@@ -9,7 +9,11 @@
         <p class="upper_text">Make Everyone Happy</p>
         <h2>HelpVille- Always for you</h2>
         <p>Donate your unused stuff and collect your necessary items. HelpVille-Make someone smile </p>
-        <a class="primary_btn mr-20" href="contact.html">Donate Now</a>
+        {% if request.user.is_authenticated %}
+        <a class="primary_btn mr-20" href="{% url 'Home:categories'%}">Donate Now</a>
+        {% else %}
+        <a class="primary_btn mr-20" href="{% url 'account_app:login'%}">Donate Now</a>
+        {% endif %}
         <a class="primary_btn yellow_btn text-white" href="{% url 'Home:categories'%}">Collect</a>
       </div>
     </div>
