@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponseRedirect
 from .forms import registerForm
+from django.urls import reverse,reverse_lazy
 
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login,logout,authenticate
-from django.shortcuts import HttpResponseRedirect
 from django.http import  HttpResponse
 # Create your views here.
 
@@ -15,7 +15,7 @@ def register(request):
 
         if form.is_valid():
             form.save()
-            return HttpResponse("registered")
+            return HttpResponseRedirect(reverse("account_app:login"))
 
 
     return render(request,'account_app/signup.html',context={'form':form})

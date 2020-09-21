@@ -198,7 +198,7 @@ button:focus {
         font-weight: 500;
         line-height: 80px;
         text-transform: uppercase;
-        color: #ffffff;
+        color: #60BC0F;
         padding: 0px;
         display: inline-block; }
         .header_area .navbar .nav .nav-item .nav-link:after {
@@ -280,6 +280,7 @@ button:focus {
     left: 0;
     right: 0;
     background: #222222;
+    /* background: linear-gradient(rgba(3, 1, 10, 0.5), rgba(3, 1, 10, 0.5)); */
     transform: translateY(70px);
     transition: transform 500ms ease, background 500ms ease;
     -webkit-transition: transform 500ms ease, background 500ms ease;
