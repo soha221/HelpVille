@@ -3,44 +3,52 @@
 
 {% block body_block %}
 {% include 'navbar.html' %}
-<main class="login-form">
+<section style="z-index: 1;
+min-height: 900px;
+display: flex;
+background: linear-gradient(rgba(3, 1, 10, 0.5), rgba(3, 1, 10, 0.5)), url(../img/banner/home-banner.jpg) no-repeat scroll center center;
+background-size: cover">
+  <!-- <main class="login-form" style="padding-top:75px;"> -->
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header">Sign In</div>
-          <div class="card-body">
-            <form method="POST">
-              {% csrf_token %}
-              <div class="form-group row">
-                <!-- <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label> -->
-                <div class="col-md-6 offset-md-2">
-                  <!-- <input type="text" id="email_address" class="form-control" name="email-address" required autofocus> -->
-                  {{ form.username|as_crispy_field }}
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <!-- <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label> -->
-                <div class="col-md-6 offset-md-2">
-                  <!-- <input type="text" id="email_address" class="form-control" name="email-address" required autofocus> -->
-                  {{ form.password|as_crispy_field }}
+    <div class="" style="padding-top:100px;">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header">Sign In</div>
+            <div class="card-body">
+              <form method="POST">
+                {% csrf_token %}
+                <div class="form-group row">
+                  <!-- <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label> -->
+                  <div class="col-md-6 offset-md-2">
+                    <!-- <input type="text" id="email_address" class="form-control" name="email-address" required autofocus> -->
+                    {{ form.username|as_crispy_field }}
+                  </div>
                 </div>
 
-              </div>
-              <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">
-                  Sign In
-                </button>
+                <div class="form-group row">
+                  <!-- <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label> -->
+                  <div class="col-md-6 offset-md-2">
+                    <!-- <input type="text" id="email_address" class="form-control" name="email-address" required autofocus> -->
+                    {{ form.password|as_crispy_field }}
+                  </div>
 
-              </div>
+                </div>
+                <div class="col-md-6 offset-md-4">
+                  <button type="submit" class="btn btn-primary">
+                    Sign In
+                  </button>
+
+                </div>
+            </div>
+            </form>
           </div>
-          </form>
         </div>
       </div>
     </div>
   </div>
   </div>
 
-</main>
+  <!-- </main> -->
+</section>
 {% endblock %}
