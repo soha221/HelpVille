@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block body_block %}
+
+{% include 'navbar.html' %}
+
+<form method="POST" enctype="multipart/form-data">
+  {{ form|crispy}}
+  {% csrf_token %}
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+{% endblock %}

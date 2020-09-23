@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% load static %}
+
+{% block body_block %}
+{% include 'navbar.html' %}
+
+
+<div class="container" style="padding:100px">
+  <a href="{% url 'account_app:editProfile'%}">Edit</a>
+
+</div>
+
+
+
+
+
+{% endblock %}
