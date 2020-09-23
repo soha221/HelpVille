@@ -1,7 +1,8 @@
 from django import forms
+from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .models import  UserProfile
+from account_app.models import  Profile
 
 
 class registerForm(UserCreationForm):
@@ -12,8 +13,13 @@ class registerForm(UserCreationForm):
         fields =('username','email','password1','password2')
 
 
-
-class editProfile(forms.ModelForm):
+class ProfileForm(ModelForm):
     class Meta:
-        model = UserProfile
+        model = Profile
         exclude = ('user',)
+
+
+# class editProfile(forms.ModelForm):
+#     class Meta:
+#         model = UserProfile
+#         fields =('first_name','last_name','gender','profile_pic','phn_number','facebook')
