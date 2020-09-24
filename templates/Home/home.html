@@ -10,7 +10,7 @@
         <h2>HelpVille- Always for you</h2>
         <p>Donate your unused stuff and collect your necessary items. HelpVille-Make someone smile </p>
         {% if request.user.is_authenticated %}
-        <a class="primary_btn mr-20" href="{% url 'Home:categories'%}">Donate Now</a>
+        <a class="primary_btn mr-20" href="{% url 'account_app:donation'%}">Donate Now</a>
         {% else %}
         <a class="primary_btn mr-20" href="{% url 'account_app:login'%}">Donate Now</a>
         {% endif %}

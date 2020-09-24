@@ -1,11 +1,12 @@
 from django.shortcuts import render,HttpResponseRedirect
-from account_app.forms import registerForm, ProfileForm
+from account_app.forms import registerForm
 from django.urls import reverse,reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login,logout,authenticate
 from django.http import  HttpResponse
-from account_app.models import  Profile
+from account_app.models import UserProfile, UserDonation
+from account_app.forms import ProfileForm,DonationForm
 from django.contrib.auth.models import User
 # Create your views here.
 
@@ -55,12 +56,28 @@ def profile(request):
 
 @login_required
 def user_profile(request):
-    profile = request.user
-    form = ProfileForm(instance=profile)
+    current_user = UserProfile.objects.get(user = request.user)
+    # current_user = request.user
+    form = ProfileForm(instance=current_user)
     if request.method == 'POST':
-        form = ProfileForm(request.POST, instance=profile)
+        form = ProfileForm(request.POST,request.FILES, instance=current_user)
+        if form.is_valid():
+            form.save(commit=True)
+            # messages.success(request, "Change Saved!!")
+            form = ProfileForm(instance=current_user)
+            return HttpResponseRedirect(reverse('Home:home'))
+    return render(request, 'account_app/edit_profile.html', context={'form':form})
+
+
+@login_required
+def donation_page(request):
+    current_user = UserProfile.objects.get(user=request.user)
+    form = DonationForm(instance=current_user)
+    if request.method == "POST":
+        form = DonationForm(request.POST,instance=current_user)
+
         if form.is_valid():
             form.save()
-            # messages.success(request, "Change Saved!!")
-            form = ProfileForm(instance=profile)
-    return render(request, 'account_app/edit_profile.html', context={'form':form})
+            return HttpResponseRedirect(reverse('account_app:profile'))
+
+    return render(request,'account_app/pdonation.html',context={'form':form})
