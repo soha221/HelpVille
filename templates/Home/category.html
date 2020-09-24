@@ -9,18 +9,18 @@
   <div class="container">
     <div class="main_title">
       <h2>categories</h2>
-      <p>here you can select your items to collect</p>
+      <p>Here you can select your items to collect</p>
     </div>
     <div class="row">
       <div class="col-lg-4 col-md-6">
-        <div class="single_causes">
+        <div class="single_causes" style="height: 600px;">
           <h4>Give Donation</h4>
           <img src="{% static "img/donate_1.png" %}" alt="">
           <p> Here you can donate foods, clothes,Medicine or your unused products and stuff. By showing this act of kindness you will make someone smile.</p>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
-        <div class="single_causes">
+        <div class="single_causes" style="height: 600px;">
           <h4>Collect Items</h4>
           <img src="{% static "img/collect.png" %}" alt="">
           <p>
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
-        <div class="single_causes">
+        <div class="single_causes" style="height: 600px;">
           <h4>Become Volunteer</h4>
           <img src="{% static "img/become_volunteer.png" %}" alt="">
           <p>
@@ -55,20 +55,20 @@
         <div class="card">
           <div class="card-body">
             <figure>
-              <img class="card-img-top img-fluid" src="{% static "img/features/fc1.jpg" %}" alt="Card image cap">
+              <img class="card-img-top img-fluid" src="{% static "img/features/fc1.jpg" %}" alt="Card image cap" style="height:300px">
             </figure>
             <div class="card_inner_body">
               <h4 class="card-title">Medicine for emergency</h4>
               <p class="card-text">
-                Here you can collect emergency medicine and ambulance service.
+                Collect emergency medicines.
               </p>
               <div class="d-flex justify-content-between raised_goal">
                 <p>Available: 900 items</p>
                 <p><span>collect 7 people</span></p>
               </div>
               <div class="d-flex justify-content-between donation align-items-center">
-                <a href="#" class="primary_btn">Donate</a>
-                <a href="#" class="primary_btn">Collect</a>
+                <!-- <a href="#" class="primary_btn">Donate</a> -->
+                <a href="{% url "Home:booth"%}" class="primary_btn">Collect</a>
                 <p><span class="lnr lnr-heart"></span> 90 people</p>
               </div>
             </div>
@@ -79,12 +79,12 @@
         <div class="card">
           <div class="card-body">
             <figure>
-              <img class="card-img-top img-fluid" src="{% static "img/features/fc2.jpg" %}" alt="Card image cap">
+              <img class="card-img-top img-fluid" src="{% static "img/features/fc2.jpg" %}" alt="Card image cap" style="height:300px">
             </figure>
             <div class="card_inner_body">
               <h4 class="card-title">Food for people</h4>
               <p class="card-text">
-                Here we provide food for the poor.
+                Collect foods from here.
               </p>
               <div class="d-flex justify-content-between raised_goal">
                 <p> Availbale: 1200items</p>
@@ -92,8 +92,8 @@
 
               </div>
               <div class="d-flex justify-content-between donation align-items-center">
-                <a href="#" class="primary_btn">Donate</a>
-                <a href="#" class="primary_btn">Collect</a>
+                <!-- <a href="#" class="primary_btn">Donate</a> -->
+                <a href="{% url "Home:booth"%}" class="primary_btn">Collect</a>
                 <p><span class="lnr lnr-heart"></span> 90 people</p>
               </div>
             </div>
@@ -104,20 +104,20 @@
         <div class="card">
           <div class="card-body">
             <figure>
-              <img class="card-img-top img-fluid" src="{% static "img/features/fc3.jpg" %}" alt="Card image cap">
+              <img class="card-img-top img-fluid" src="{% static "img/features/fc3.jpg" %}" alt="Card image cap" style="height:300px">
             </figure>
             <div class="card_inner_body">
               <h4 class="card-title">Providing clothes</h4>
               <p class="card-text">
-                You can donate and collect your extra clothes from here.
+                Collect your clothes from here.
               </p>
               <div class="d-flex justify-content-between raised_goal">
                 <p>Available : 1500items</p>
                 <p><span> Collect : 4 people</span></p>
               </div>
               <div class="d-flex justify-content-between donation align-items-center">
-                <a href="#" class="primary_btn">Donate</a>
-                <a href="#" class="primary_btn">Collect</a>
+                <!-- <a href="#" class="primary_btn">Donate</a> -->
+                <a href="{% url "Home:booth"%}" class="primary_btn">Collect</a>
                 <p><span class="lnr lnr-heart"></span> 90 people</p>
               </div>
             </div>

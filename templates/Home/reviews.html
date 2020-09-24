@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block body_block %}
 
@@ -26,7 +27,7 @@
         <div class="single-post row">
           <div class="col-lg-6">
             <div class="feature-img">
-              <img class="img-fluid" src="img/blog/feature-img1.png" alt="">
+              <img class="img-fluid" src="{% static "img/blog/feature-img1.png" %}" alt="">
             </div>
           </div>
 
@@ -37,15 +38,15 @@
             <div class="blog_right_sidebar">
               <aside class="single_sidebar_widget search_widget">
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search Posts">
+                  <!-- <input type="text" class="form-control" placeholder="Search Posts"> -->
                   <span class="input-group-btn">
                     <button class="btn btn-default" type="button"><i class="lnr lnr-magnifier"></i></button>
                   </span>
                 </div><!-- /input-group -->
-                <div class="br"></div>
+                <!-- <div class="br"></div> -->
               </aside>
               <aside class="single_sidebar_widget author_widget">
-                <img class="author_img rounded-circle" src="img/blog/authornew.jpg" alt="">
+                <img class="author_img rounded-circle" src="{% static "img/blog/authornew.jpg" %}" alt="">
                 <h4>Soha Khadizatul Kubra</h4>
                 <p>Admin</p>
                 <div class="social_icon">
@@ -55,10 +56,10 @@
                   <a href="#"><i class="fa fa-behance"></i></a>
                 </div>
                 <p>Hey there! We are here to help you.</p>
-                <div class="br"></div>
+                <!-- <div class="br"></div> -->
               </aside>
 
-              <aside class="single_sidebar_widget post_category_widget">
+              <!-- <aside class="single_sidebar_widget post_category_widget">
                 <h4 class="widget_title">Booth Location</h4>
                 <ul class="list cat-list">
                   <li>
@@ -132,11 +133,11 @@
                   <li><a href="#">Polton</a></li>
                   <li><a href="#">Mohammadpur</a></li>
                 </ul>
-              </aside>
+              </aside> -->
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <div class="comment-form">
               <h4>Give us your Opinion</h4>
               <form>
@@ -168,7 +169,7 @@
 
 
 
-          <div class="col-lg-3  col-md-3">
+          <!-- <div class="col-lg-3  col-md-3">
             <div class="blog_info text-right">
               <div class="post_tag">
                 <a href="#">Address,</a>
@@ -176,146 +177,22 @@
                 <a href="#">Reviews,</a>
                 <a href="#">Location</a>
               </div>
-              <!-- <ul class="blog_meta list">
+              <ul class="blog_meta list">
                                         <li><a href="#">Mark wiens<i class="lnr lnr-user"></i></a></li>
                                         <li><a href="#">12 Dec, 2017<i class="lnr lnr-calendar-full"></i></a></li>
                                         <li><a href="#">1.2M Views<i class="lnr lnr-eye"></i></a></li>
                                         <li><a href="#">06 Comments<i class="lnr lnr-bubble"></i></a></li>
-                                    </ul> -->
-              <ul class="social-links">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-github"></i></a></li>
-                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="comment-form">
-            <h4>Give us your Opinion</h4>
-            <form>
-              <div class="form-group form-inline">
-                <div class="form-group col-lg-6 col-md-6 name">
-                  <input type="text" class="form-control" id="name" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'">
-                </div>
-                <div class="form-group col-lg-6 col-md-6 email">
-                  <input type="email" class="form-control" id="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'">
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="subject" placeholder="Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control mb-10" rows="5" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
-              </div>
-              <a href="#" class="primary-btn primary_btn">Post Comment</a>
-            </form>
-          </div>
+                                    </ul>
+         <ul class="social-links">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-github"></i></a></li>
+            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+          </ul>
         </div>
-        <div class="col-lg-4">
-          <div class="blog_right_sidebar">
-            <aside class="single_sidebar_widget search_widget">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search Posts">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="button"><i class="lnr lnr-magnifier"></i></button>
-                </span>
-              </div><!-- /input-group -->
-              <div class="br"></div>
-            </aside>
-            <aside class="single_sidebar_widget author_widget">
-              <img class="author_img rounded-circle" src="img/blog/authornew.jpg" alt="">
-              <h4>Soha Khadizatul Kubra</h4>
-              <p>Admin</p>
-              <div class="social_icon">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-github"></i></a>
-                <a href="#"><i class="fa fa-behance"></i></a>
-              </div>
-              <p>Hey there! We are here to help you.</p>
-              <div class="br"></div>
-            </aside>
+      </div> -->
 
-            <aside class="single_sidebar_widget post_category_widget">
-              <h4 class="widget_title">Booth Location</h4>
-              <ul class="list cat-list">
-                <li>
-                  <a href="#" class="d-flex justify-content-between">
-                    <p>Basundhara</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="d-flex justify-content-between">
-                    <p>Mirpur</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="d-flex justify-content-between">
-                    <p>Gulshan</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="d-flex justify-content-between">
-                    <p>Badda</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="d-flex justify-content-between">
-                    <p>Dhanmondi</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="d-flex justify-content-between">
-                    <p>Khilgaon</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="d-flex justify-content-between">
-                    <p>Uttara</p>
-                  </a>
-                </li>
-              </ul>
-              <div class="br"></div>
-            </aside>
-            <aside class="single-sidebar-widget newsletter_widget">
-              <h4 class="widget_title">Mail Us</h4>
-              <p>
-                If you have any query in location please mail us.
-              </p>
-              <div class="form-group d-flex flex-row">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-                  </div>
-                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="khadizatul.kubra@northsouth.edu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'khadizatul.kubra@northsouth.edu'">
-                </div>
-                <a href="#" class="bbtns">Mail</a>
-              </div>
-              <p class="text-bottom">You can mail us any time</p>
-              <div class="br"></div>
-            </aside>
-            <aside class="single-sidebar-widget tag_cloud_widget">
-              <h4 class="widget_title">Booth Location</h4>
-              <ul class="list">
-                <li><a href="#">Basundhara</a></li>
-                <li><a href="#">Mirpur</a></li>
-                <li><a href="#">Gulshan</a></li>
-                <li><a href="#">Badda</a></li>
-                <li><a href="#">Dhanmondi</a></li>
-                <li><a href="#">Khilgaon</a></li>
-                <li><a href="#">Shahbag</a></li>
-                <li><a href="#">Khilkhet</a></li>
-                <li><a href="#">Banani</a></li>
-                <li><a href="#">Uttara</a></li>
-                <li><a href="#">Polton</a></li>
-                <li><a href="#">Mohammadpur</a></li>
-              </ul>
-            </aside>
-          </div>
-        </div>
-      </div>
-    </div>
+
 </section>
 <!--================Blog Area =================-->
 

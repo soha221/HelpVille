@@ -431,6 +431,7 @@ button:focus {
   box-shadow: none;
   text-align: center;
   margin-bottom: 30px;
+  height: 650px;
   transition: all 300ms linear 0s;
   background: #f9fafc; }
   @media (max-width: 575px) {
@@ -1660,7 +1661,7 @@ button:focus {
 
 
 
-  
+
 
 /*==============End Elements Button Area css ================*/
 /* =================================== */
