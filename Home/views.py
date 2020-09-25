@@ -19,3 +19,10 @@ def category(request):
 
 def booth(request):
     return render(request,'Home/booth.html')
+
+def about(request):
+    return render(request,'Home/about.html')
+
+
+def contact(request):
+    return render(request,'Home/contact.html')
