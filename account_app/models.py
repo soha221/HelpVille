@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse,reverse_lazy
 from django.contrib.auth.models import User
 
 class UserProfile(models.Model):
@@ -12,8 +13,8 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return str(self.user)
-
-
+    def get_absolute_url(self):
+        return reverse('Home:home')
 
 class UserDonation(models.Model):
     donar = models.ForeignKey(UserProfile,on_delete=models.CASCADE,related_name='user_d')

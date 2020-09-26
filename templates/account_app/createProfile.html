@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{% block body_block %}
+
+{% include 'navbar.html' %}
+
+<section class="signup_banner_area" style="z-index: 1;
+min-height: 900px;
+display: flex;
+background: linear-gradient(rgba(3, 1, 10, 0.5), rgba(3, 1, 10, 0.5)), url(../img/banner/home-banner.jpg) no-repeat scroll center center;
+background-size: cover">
+  <div class="container">
+    <div class="" style="padding-top:75px;">
+
+
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header">Edit Your Profile</div>
+            <div class="card-body">
+              <form method="POST" enctype="multipart/form-data">
+                {{ form|crispy}}
+                {% csrf_token %}
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock %}
