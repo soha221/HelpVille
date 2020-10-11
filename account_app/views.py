@@ -8,18 +8,10 @@ from django.http import  HttpResponse
 from account_app.models import UserProfile, UserDonation
 from account_app.forms import ProfileForm,DonationForm,CreateProfileForm
 from django.contrib.auth.models import User
-from django.views.generic import CreateView,UpdateView,DetailView,ListView,DetailView,TemplateView,View
+
 # Create your views here.
 
-class  CreateProfilePage(CreateView):
-    model = UserProfile
-    form_class = CreateProfileForm
-    template_name = "account_app/createProfile.html"
-    # fields = '__all__'
 
-    def form_valid(self,form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
 
 def register(request):
     form = registerForm()
